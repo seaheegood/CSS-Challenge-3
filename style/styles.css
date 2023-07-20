@@ -1,0 +1,121 @@
+/* General Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+/* body content */
+body {
+  font-family: "Shantell Sans", cursive;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rampart One", cursive;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p:has(> a) {
+  text-align: center;
+}
+
+/* Layout & Apperance */
+
+header {
+  height: 15vw;
+  background-color: #ff8360;
+  color: #fff;
+  /* Position h1 text in the middle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+  border: 2px solid #999;
+  padding: 1em;
+}
+
+/* section */
+main section > div + p {
+  background-color: #3cdbd3;
+  padding: 1em;
+}
+
+main section {
+  /* Use flexbox */
+  display: flex;
+  /* Put a gap between contents */
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+main section > main section:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Use flex-basis */
+main > section:nth-of-type(1) div {
+  flex-basis: 20%;
+}
+
+main section::nth-of-type(1) p {
+  flex: 80%;
+}
+
+main section:nth-of-type(2) p {
+  background-color: #e8e288;
+  padding: 1em;
+}
+
+/* footer */
+
+footer p,
+footer a {
+  background-color: #7dce82;
+  color: #fff;
+  padding: 2em;
+  border: 2px solid #fff;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer a {
+  background-color: #ff8360;
+}
+
+footer a:hover {
+  background-color: #9c528b;
+}
+
+/* Reverse the order of contents */
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Fill the rest space */
+footer p {
+  flex-grow: 1;
+}
